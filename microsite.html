@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>The War On Drugs Has Failed</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap" rel="stylesheet">
+    
+<style>
+    body {
+        background-image: url(bg.jpg),  url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=626262&density=49&opacity=35);
+        background-repeat: no-repeat, repeat;
+        background-size:cover;
+        font-style: italic;
+}
+    
+    /* Text */
+ h1{
+        margin-top: -700px;
+        padding-bottom: -100px;
+        text-align: center;
+        color: whitesmoke;
+        font-family: PT Mono;
+        font-size: 35px
+}
+    
+ h2{
+     
+        text-align: center;
+        color: white;
+        font-family: "Oswald";
+        font-style: italic;
+        margin-top: 0px;
+        font-size: 40px
+    
+}   
+ 
+  p{
+      
+        text-align: center;
+        color: ghostwhite;
+        font-family: monospace;
+    
+}
+    
+    /* Animated Title */
+.container {
+    
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        font-style: italic;
+}
+
+.glitch {
+        color: rgb(223, 191, 191);
+        position: relative;
+        font-size: 8vw;
+        animation: glitch 5s 5s infinite;
+}
+
+.glitch:before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: -5px 0 magenta;
+        overflow: hidden;
+        top: 0;
+        animation: noise-1 2s linear infinite alternate-reverse, glitch 2s 2.05s infinite;
+}
+
+.glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -5px 0 lightgreen;
+        overflow: hidden;
+        top: 0;
+        animation: noise-2 2s linear infinite alternate-reverse, glitch 2s 2s infinite;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(40deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+.glow {
+        @extend .glitch;
+        text-shadow: 0 0 1000px rgb(223, 191, 191);
+        color: transparent;
+        position: absolute;
+        top: 0;
+}
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(30deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+    
+    /* Navigation Bar */
+.overlay {
+    
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0px;
+        overflow-x: hidden;
+        transition: 0.5s;
+        text-align: left;
+        font-family: "Oswald";
+}
+
+.overlay-content {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding-top: 320px;
+        background: rgba(0, 0, 0, 0.5);
+    
+}
+
+.overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+    
+    /* Number */
+    :root {
+	--white:#f1f1f1
+}
+.box {
+        margin-top: 4px;
+        font-family: monospace;
+        font-size: 200px;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160vh;
+        padding-bottom: 0px;
+    
+}
+div > span {
+	opacity: 1;
+}
+
+#L, #G {
+	animation: flickerLG 2s linear reverse infinite;
+	position: relative;
+}
+#L::before  {
+	content:' ';
+	width: 100px;
+	height: 100px;
+	background: var(--white);
+	position: absolute;
+	top: -50%;
+	left: 100%;
+	border-radius: 100%;
+	opacity: 0.05;
+	filter: blur(10px);
+}
+#L::after {
+	width: 200px;
+	height: 200px;
+	top: -150%;
+	left: -5%;
+	opacity: 0.1;
+}
+#H {
+	animation: flickerH 2s linear reverse infinite
+}
+
+#T {
+	animation: flickerH 2s linear reverse infinite
+}
+
+@keyframes flickerLG {
+	0% {
+		opacity: 0.19;
+	}
+	5% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.25;
+	}
+	15% {
+		opacity: 0.35;
+	}
+	25% {
+		opacity: 0.2;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	35% {
+		opacity: 0.1;
+	}
+	40% {
+		opacity: 0.25;
+	}
+	45% {
+		opacity: 0.2;
+	}
+	60% {
+		opacity: 0.4;
+	}
+	70% {
+		opacity: 0.35;
+	}
+	80% {
+		opacity: 0.4;
+	}
+	90% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.4;
+	}
+}
+
+@keyframes flickerH {
+	0% {
+		opacity: 0.15;
+	}
+	5% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.12;
+	}
+	15% {
+		opacity: 0.2;
+	}
+	25% {
+		opacity: 0.15;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	35% {
+		opacity: 0.05;
+	}
+	40% {
+		opacity: 0.12;
+	}
+	45% {
+		opacity: 0.15;
+	}
+	60% {
+		opacity: 0.3;
+	}
+	70% {
+		opacity: 0.2;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	90% {
+		opacity: 0.18;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
+
+@keyframes flickerT {
+	0% {
+		opacity: 0.01;
+	}
+	5% {
+		opacity: 0.05;
+	}
+	10% {
+		opacity: 0.03;
+	}
+	15% {
+		opacity: 0.1;
+	}
+	25% {
+		opacity: 0.07;
+	}
+	30% {
+		opacity: 0.1;
+	}
+	35% {
+		opacity: 0.05;
+	}
+	40% {
+		opacity: 0.06;
+	}
+	45% {
+		opacity: 0.1;
+	}
+	60% {
+		opacity: 0.;
+	}
+	70% {
+		opacity: 0.1;
+	}
+	80% {
+		opacity: 0.;
+	}
+	90% {
+		opacity: 0.0;
+	}
+	100% {
+		opacity: 0.1;
+	}
+}
+    
+   /* Vertical Line */ 
+.verticalLine {
+        
+        position: absolute;
+        background-color: white;
+        width: 4px;
+        height: 760px;
+        top: 796px;
+        bottom: 0px;
+        left: 50%;
+}
+     
+.first {
+        width: 100%;
+        height: 10px;
+        text-align: center;
+        font-size: 40px;
+}
+
+    /* Photo Slideshow */   
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+        max-width: 600px;
+        padding: -20px;
+        position: relative;
+        margin: auto;
+}
+    
+.text {
+        color: #f2f2f2;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+}
+    
+.numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+}
+    
+.dot {
+        height: 15px;
+        width: 15px;
+        margin: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+}
+    
+.fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+}
+@keyframes fade {
+    
+        from {opacity: .4} 
+        to {opacity: 1}
+}
+    
+    /* Footer */
+.footer {
+    
+        width: 100%;
+        position:relative;
+        height: auto;
+        font-family: monospace;
+
+}
+.footer .col {
+    
+        width: 300px;
+        height: auto;
+        float: left;
+        padding: 0px 30px 30px 30px;
+}
+.footer .col h1 {
+    
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+        font-size: 12px;
+        line-height: 10px;
+        padding: 15px 0px 5px 0px;
+        color: white;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.250em;
+}
+.footer .col ul {
+    
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    
+}
+.footer .col ul li {
+    
+        color: #999999;
+        font-size: 17px;
+        font-family: inherit;
+        font-weight: bold;
+        padding: 5px 0px 5px 0px;
+        cursor: pointer;
+        transition: .2s;
+
+}
+.social ul li {
+    
+        display: inline-block;
+        padding-right: 5px !important;
+}
+.footer .col ul li:hover {
+    
+        color: #ffffff;
+        transition: .1s;
+
+}
+.clearfix {
+    
+        clear: both;
+    
+}
+    
+    /* Button */
+.button {
+    
+        background-color: transparent;
+        padding: 20px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 23px;
+        cursor: pointer;
+        color:white;
+        font-family: "Oswald";
+        font-style: italic;
+}
+.button_slide {
+    
+        margin-top: 650px;
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 20px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 #FFFFFF;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+}
+.slide_right:hover {
+    
+        box-shadow: inset 400px 0 0 0 #000000;
+}
+
+/* End Quote */
+#outer {
+  width: 364px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+.line {
+    
+      position: relative;
+      top: 50%;
+      width: auto;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      font-size: 150%;
+      font-family: 'Anonymous Pro', monospace;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;transform: translateY(-50%);
+}
+.anim-typewriter {
+    
+      animation: typewriter 4s steps(40) 1s 1 normal both,
+      blinkTextCursor 500ms steps(40) infinite normal;
+        animation-iteration-count: infinite;
+}
+@keyframes typewriter {
+      from {
+            width: 0;
+      }
+      to {
+            width: 17em;
+      }
+}
+    
+@keyframes blinkTextCursor {
+      from {
+          
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+      }
+
+
+    }
+</style>
+    
+<body>  
+
+    <div class="container">
+        <div class="glitch" data-text="WAR ON DRUGS HAS FAILED">WAR ON DRUGS HAS FAILED</div>
+            <div class="glow">WAR ON DRUGS HAS FAILED</div>
+    </div>
+    
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <div class="overlay-content">
+            <a href="about.html">About</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="gethelp.html">Get Help</a>
+        </div>
+    </div>
+    
+    <span style="font-size:30px;cursor:pointer;color: white" onclick="openNav()">&#9776;</span>
+    
+    <div id="outer">
+        <div class="button_slide slide_right"><button type="button" button class="button" onclick="smoothScroll(document.getElementById('L'))">FIND OUT MORE</button></div>
+            <br /> <br /><br />
+
+    </div>
+    
+    <div class="first">
+    
+        <div class="verticalLine">
+        
+    </div >
+        
+    <div class= "box" >
+	       <span id="L">3,</span>
+	       <span id="G">4</span>
+	       <span id="H">3</span>
+	       <span id="T">8</span>
+    </div>
+    
+ <h1 >people arrested for drug usage in 2018 </h1>
+    
+     <p> <img src="drug/7.jpeg" width="600px"> </p>
+        
+        <p><br>That’s over 9 people a day.
+           <br>The worst part of it?
+           <br> Anti-drug efforts are not working.
+           <br>Drug abuse is still happening. 
+           <br>It’s getting worse.</p>
+        
+  <hr>
+        
+   <h2>Why Should You Care?</h2>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="human/1.JPG" style="width:100%">
+        <div class="text">Drug abusers can be anyone. Be it strangers or a close friend.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="human/6.JPG" style="width:100%">
+        <div class="text">We need to take action and help them before it is too late.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="drug/12.JPG" style="width:100%">
+        <div class="text">Life does not rewind. Say no to drugs.</div>
+    </div>
+
+</div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+
+ <p class="line anim-typewriter">be the change you want to see.</p>
+        
+        <hr> 
+        
+ <div class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Our Site</h1>
+                <ul>
+                    <li><a href="about.html" style="color: white">About</a></li>
+                    <li><a href="statistics.html" style="color: white">Statistics</a></li>
+                    <li><a href="gallery.html" style="color: white">Gallery</a></li>
+                    <li><a href="gethelp.html" style="color: white">Get Help</a></li>
+                </ul>
+        </div>
+
+    <div class="col">
+            <h1>Resources</h1>
+                <ul>
+                    <li><a href="https://www.cnb.gov.sg" style="color: white">CNB</a></li>
+                    <li><a href="http://ncada-stl.org" style="color: white">NCADA</a></li>
+                    <li><a href="https://www.nams.sg/Pages/default.aspx" style="color: white">NAMS</a></li>
+                    <li><a href="https://www.sana.org.sg" style="color: white">SANA</a></li>
+                    <li><a href="http://www.score.gov.sg" style="color: white">SCORE</a></li>
+                </ul>
+        </div>
+        
+    <div class="col social">
+    <h1>Share Our Site</h1>
+                <ul>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Stop Drug Abuse" data-url="https://https://indigo.imfast.io/Indigo/microsite.html/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                </ul>
+    </div>
+        
+        <div class="clearfix"></div>
+     </div>
+</div>
+    </div>
+    
+<script>
+    
+    /* Navigation Bar */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+    
+    /* Scroll */
+    window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { 
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = 0;
+    do { 
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+    
+    /* Photo Slideshow */
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2500);
+}
+</script>
+    
+</body>
+</html>

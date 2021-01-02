@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Statistics</title>
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    
+    <style> 
+        
+body {
+        background-image: url(drug/11.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+        font-family:  'Cousine', monospace;
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        width: 50%;
+        height: 50%;
+        margin:auto; 
+        position:relative;
+        padding-top: 0px;
+        text-align: center;
+        align-content: center;
+        
+}
+        
+p{
+        color:black;
+        
+}
+        
+  .semi-transparent-button {
+        display:inline;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+        padding: 12px;
+        width: 80%;
+        max-width: 2000px;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-out;
+        line-height: 4;
+}
+        
+.semi-transparent-button:hover,
+.semi-transparent-button:focus,
+.semi-transparent-button:active {
+        background: #fff;
+        color: #000;
+        transition: all 0.5s ease-in;
+}
+        
+.semi-transparent:focus {
+        outline: none;
+}
+
+    </style>
+    
+<body>
+
+            <h1>Statistics</h1>
+
+    <table class="columns" style="align-items: center">
+            <tr>
+                <td><div id="1_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="2_chart_div" style="border: 1px solid #ccc"></div></td>
+            </tr>
+
+    </table>
+    
+        <p> This data shows that many respondents are unsure of their stance regarding drug abuse in Singapore, with almost 75% of respondents having a neutral view towards abusers and 1 in 3 respondents think that there is no drug abuse issue in Singapore, implying that there is a need to teach people more regarding drug abuse so no one else would fall prey into drug abuse.</p>
+    <table class="columns">
+            <tr>
+                <td><div id="3_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="4_chart_div" style="border: 1px solid #ccc"></div></td>   
+            </tr>
+        
+    </table>
+    
+        <p>This data is worrying to see as it means that every 1 in 10 Singaporean youths have undergone conditions that tempted them to start drug usage, implying that there is a significant amount of motivation for drug usage among youths in Singapore. The most popular anti-drug effort chosen by respondents is to have more laws and policies.</p>
+    
+
+        <p> <a class="semi-transparent-button" href="microsite.html">Home</a> <a class="semi-transparent-button" href="gallery.html">Gallery</a> 
+            
+            
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(draw1Chart);
+
+      google.charts.setOnLoadCallback(draw2Chart);
+
+
+      function draw1Chart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Question');
+        data.addColumn('number', 'Respondents');
+        data.addRows([
+          ['Neutral', 86],
+          ['Despicable', 8],
+          ['Emphathetic', 21],
+    
+        ]);
+
+        var options = {title:'What do you think of drug offenders in general?',
+                       width:500,
+                       height:400,
+                      backgroundColor: 'none',
+  colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']};
+
+        var chart = new google.visualization.PieChart(document.getElementById('1_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function draw2Chart() {
+
+          var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Question');
+        data.addColumn('number', 'Respondents');
+        data.addRows([
+          ['Yes', 72],
+          ['No', 36],
+        ]);
+
+        var options = {title:'Do you feel that drug usage in Singapore is an issue?',
+                          width:500,
+                       height:400,
+                      backgroundColor: 'none',
+  colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']};
+
+        var chart = new google.visualization.PieChart(document.getElementById('2_chart_div'));
+        chart.draw(data, options);
+      }
+        
+        google.charts.load('current', {
+  packages: ['corechart', 'bar']
+});
+google.charts.setOnLoadCallback(drawTitleSubtitle);
+
+function drawTitleSubtitle() {
+ 
+
+  var materialOptions = {
+    chart: {}};
+    
+  var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+  materialChart.draw(data, materialOptions);
+}
+      google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(draw3Chart);
+
+      google.charts.setOnLoadCallback(draw4Chart);
+
+      function draw3Chart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Question');
+        data.addColumn('number', 'Respondents');
+        data.addRows([
+          ['Yes', 11],
+          ['No', 104],
+        ]);
+
+        var options = {title:'Have you ever contemplated taking drugs?',
+                       width:500,
+                       height:400, 
+                       backgroundColor: 'none',
+  colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']};
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('3_chart_div'));
+        chart.draw(data, options);
+      }
+
+
+      function draw4Chart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Question');
+        data.addColumn('number', 'Respondents');
+        data.addRows([
+          ['Youth Advocacy', 36],
+          ['Laws and policies prohibiting drug use', 44],
+          ['Rehabilitation and reducing the harm caused by drugs', 26],
+        ]);
+
+        var options = {title:'Which do you think is the most effective method of fighting drug use in Singapore?',
+                       width:500,
+                       height:400,          
+                       backgroundColor: 'none',
+  colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']};
+
+        var chart = new google.visualization.PieChart(document.getElementById('4_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    </body>
+</html>
